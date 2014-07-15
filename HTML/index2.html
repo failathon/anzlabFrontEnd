@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dashboard for ANZ Lab">
+    <meta name="author" content="xxx">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+
+    <title>ANZ Lab Dashboard v0.2</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/ui-lightness/jquery-ui-1.10.4.min.css" rel="stylesheet">
+
+    <!-- v0.2 18-06-2014 -->
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">ANZ Lab Dashboard v0.2</a>
+        </div>
+
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="about:blank">Contact Admin</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Lab Overview</a></li>
+            <li><a href="#Announcements">Announcements</a></li>
+            <li><a href="#QuickStart">Quick Start guide</a></li>
+            <li><a href="#UsingTheLab">Using the Lab</a></li>
+            <li><a href="#FAQ">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Available Sandpits</h1>
+
+          <!--
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+          </div>
+          -->
+
+          <!--
+            <h2 class="sub-header">RDP Links</h2>
+          -->
+          <div class="table-responsive">
+            <table class="table table-striped table-hover" id="table-instances">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Status</th>
+                  <th>RDP Link</th>
+                  <th>Passwords</th>
+                  <th>IP Address</th>
+                </tr>
+              </thead>
+              <tbody id="table-instances-body">
+                <tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <br><br>
+          <h2 class="sub-header" id="Announcements">Announcements</h2>
+          <div class=".col-xs-12 .col-sm-6 .col-md-8">
+            <ul>
+              <li>Please note that <strong>SandPit 3</strong> is a testing environment and should be used only for testing. Demos are better suited to 1 and 2 until we can refresh the environment next week.</li>
+              <li>Downtime is expected <strong>week of 23/06</strong> to redeploy all sandpits with Service Pack 7.</li>
+              <li>Please contact the <a href="about:blank">admin</a> if you have any questions or concerns.</li>
+            </ul>
+          </div>
+
+          <h2 class="sub-header" id="UsingTheLab">Using the Lab</h2>
+          <div class=".col-xs-12 .col-sm-6 .col-md-8">
+            <h3 name="QuickStart">Quick Start<br>
+              <small>Jumping in with both feet</small>
+            </h3>
+              <ul>
+                <li>Look at the <a href="#table-instances">List of Sandpits</a> above for the sandpit you wish to use</li>
+                <li>Click on <em>Show Passwords</em> for the passwords to that Sandpit</li>
+                <li>Click on <em>Start RDP</em> to download the RDP link for the Sandpit's JumpBox</li>
+                <li>Open the newly downloaded RDP file to begin the Remote Desktop session to the sandpit.  Use the Jumpbox password from the <em>Show Passwords</em> link on the screen.</li>
+                <li>CommCell Console is available from the JumpBox, open from the Desktop or the Start buttion</li>
+              </ul>
+
+            <h3 id="CurrentPatchLevels">Current patch levels</h3>
+              <p align="text-left">
+                Currently most sandpits are patched to <strong>SP6</strong>, with SandPit3 as the exception.  A redeployment of the sandpit will be undertaken within <strong>week of 23/06</strong> to patch all environments up to SP7.
+              </p>
+
+            <h3 id="SandPitOverview">Sandpit Environment Overview</h3>
+              <p align="text-left">
+                The environment is powered by VMware ESX 5.5 with NFS Datastores on a NetApp FAS 2040 (single controller) using 12x 1TB SATA/NL-SAS drives.
+              </p>
+              <p align="text-left">
+                Each sandpit is based off a single Gold Image representing the full capabilities of the environment.
+              </p>
+              <p align="text-left">
+                Network description goes here
+              </p>
+
+            <h3 id="DeployingYourOwnPatches">Deploying your own patches or custom software</h3>
+              <p align="text-left">
+                It is possible to deploy Hotfixes by downloading them via the Jumpbox (or uploading to the jumpbox) before then copying and deploying against the target hosts.
+              </p>
+              <p align="text-left">
+                Custom/3rd party software deployments should be kept to a minimum, however if there is an application that you would use regularly and like to see added to the Gold image, please contact the <a href="about:blank">admin</a>
+              </p>
+
+            <h3 id="FAQ">FAQ</h3>
+              <p align="text-left">
+                <strong>Will there be a reservation system?</strong><br>
+                Yes.  While currently the only way to ensure access of a sandpit doesn't overlap is by contacting your peers, it is not a scalable solution and a reservation system will be built into the self-service capability as a priority targetted for <strong>end of July 2014</strong>.
+              </p>
+              <p align="text-left">
+                <strong>Can I directly access the hypervisor hosting the environment?</strong><br>
+                No.  This is intentionally so as to preserve the environment's stability and configuration, preventing manual work required to rectify changes for singluar tests/demos.  If changes are required, please contact the <a href="about:blank">admin</a>.
+              </p>
+              <p align="text-left">
+                <strong>Why are there only 3 instances? Why can't I spawn my own?</strong><br>
+                While the method in which the sandpit environment has been built (single v10 gold image, using FlexClone'd volumes to present thin-provisioned, optimised sandpit images that fit nicely within the NetApp cache) supports such a capability, there is limited IOPS within the environment to sustain more than 3 instances running under a Medium-sized workload.<br>
+                If this changes, then the capability to provision your own instance will be provided as self-service in the future.
+              </p>
+              <p align="text-left">
+                <strong>Can I test cloud storage within this environment?</strong><br>
+                Direct testing of cloud storage is not possible due to the network design.  Any testing is recommended to use simulators, or users should look at leveraging Fishbowl or personal labs for their testing.
+              </p>
+              <p align="text-left">
+                <strong>Why can't I access this outside the VPN?</strong><br>
+                Security clause goes here
+              </p>
+              <p align="text-left">
+                <strong>Are backups taken of each sandpit in preparation for my demo/test?</strong><br>
+                Yes. Daily and Weekly storage-level/crash-consistent backups are taken on a nightly basis for each environment, allowing for fast Revert to Snapshot capability in the event that your sandpit instance suffers an irreparible fault.  Currently this capablility is admin-side only, but a self-service capability is being worked on.
+              </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="dialog-modal-showPassword" title="Show Passwords" style="display: none;">
+      <!-- passwords are fixed in the lab.  future generation should do a AJAX call to obtain from a DB -->
+      <table class="table table-striped table-hover table-bordered table-condensed passwords" id="table-passwords">
+        <thead>
+          <tr>
+            <th>System</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="table-passwords-body">
+          <tr><td>Jump Box (and all hosts)</td><td>xxx</td><td>xxx</td><td></td></tr>
+          <tr><td>CommVault admin</td><td>admin</td><td>xxx</td><td></td></tr>
+          <tr><td>Domain Administrator</td><td>xxx</td><td>xxx</td><td></td></tr>
+          <tr><td>ESXi Host</td><td>root</td><td>xxx</td><td>xxx</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Bootstrap Core and Project JavaScript files
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui-1.10.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#table-instances-body').html = '<tr><img src="img/720.gif" height="21" width="63"></tr>';
+
+        $.getJSON('http://labs-vcenter.gp.cv.commvault.com:81/rest', {function:'getInstanceList'}, function (data) {
+          $.each(data, function(InstanceName, element) {
+            var tablerow = $('<tr>');
+            
+            tablerow.append($('<td>').text(InstanceName));
+            tablerow.append($('<td>').text(data[InstanceName]['State']));
+            
+            if(data[InstanceName]['IP'] != undefined) {
+              tablerow.append($('<td>').html('<a href="/rdp/' + data[InstanceName]['IP'] + '">Start RDP</a>'));
+            } else {
+              tablerow.append($('<td>').text('na'));
+            }
+            
+            //tablerow.append($('<td>').text(data[InstanceName]['Uptime']));
+
+            if (data[InstanceName]['State'] != 'Running') {
+              tablerow.append($('<td>').text('na'));
+            } else {
+              tablerow.append($('<td>').html('<a href="#" onclick="showPasswordDialog(\'' + InstanceName + '\');">Show Passwords</a>'));
+            }
+            tablerow.append($('<td>').text(data[InstanceName]['IP']));
+
+            $('#table-instances-body').append(tablerow);
+          });
+        });
+      });
+
+      function showPasswordDialog(name) {
+        $("#dialog-modal-showPassword").dialog({
+          width: "auto",
+          title: name
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+npm install socket.io
+npm install connect
+npm install util
+npm install timers
+npm install http
+npm install url
+npm install node-windows
